@@ -73,4 +73,35 @@ The CSV must contain these columns:
 
 The `Date` column must contain timestamps that can be interpreted in New York market time.
 
-**Important:** Ensure that your timestamps are correctly converted to the `America/New_York` time zone before calculating RTH levels. The strategy's session times must mat_
+**Important:** Ensure that your timestamps are correctly converted to the `America/New_York` time zone before calculating RTH levels. The strategy's session times must match the timestamps in your dataset.
+
+## Running the Backtest
+
+Start Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Open `Untitled-1.ipynb` and execute the cells in order.
+
+The notebook loads the historical data, calculates daily RTH highs and lows, executes the gap-fill strategy, and generates backtesting results.
+
+## Customization
+
+You can modify the strategy parameters in the notebook, including:
+
+* Minimum gap size.
+* Entry conditions.
+* Stop-loss and take-profit calculations.
+* Trading session times.
+* Initial account balance.
+* Commission assumptions.
+
+## Disclaimer
+
+This project is intended for educational and quantitative research purposes only.
+
+Backtesting results do not guarantee future performance. Actual trading results may differ because of commissions, slippage, execution constraints, and market conditions.
+
+Always validate the strategy using realistic trading costs and out-of-sample historical data before considering live deployment.
